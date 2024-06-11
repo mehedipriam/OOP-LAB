@@ -1,1 +1,164 @@
-ab
+----------------------------- 2 -----------------------------
+//Main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        int a;
+        float b;
+        String name;
+
+        Scanner s1 = new Scanner(System.in);
+        Scanner s2 = new Scanner(System.in);
+        System.out.println("A , B and Name : ");
+        a = s1.nextInt();
+        b = s1.nextFloat();
+        name = s2.nextLine();
+
+        System.out.println("A = "+a);
+        System.out.println("B = "+b);
+        System.out.println("Name : "+name);
+
+    }
+}
+
+
+----------------------------- 2.1 -----------------------------
+
+//Main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        int sampleArray[] = new int[5];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter number : ");
+        for(int x: sampleArray)
+        {
+            x = sc.nextInt();
+        }
+    }
+}
+
+
+
+----------------------------- 2.2 -----------------------------
+//main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Student s1 = new Student();
+        Scanner sc = new Scanner(System.in);
+        s1.name = sc.nextLine();
+        s1.Id = sc.nextLine();
+        s1.cgpa = sc.nextFloat();
+        s1.display(s1.name, s1.Id, s1.cgpa);
+
+    }
+}
+//Student.java
+public class Student {
+    String name;
+    String Id;
+    float cgpa;
+    void display(String name, String Id, float cgpa)
+        {
+            System.out.println("Name : " +name);
+            System.out.println("ID : " +Id);
+            System.out.println("CGPA : " +cgpa);
+        }
+    public String toString(){
+        return name +" "+cgpa;
+    }
+}
+
+
+
+----------------------------- 2.3 -----------------------------
+
+//Main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        Student st = new Student();
+        Scanner sc = new Scanner(System.in);
+        st.name = sc.nextLine();
+        st.Id = sc.nextLine();
+        st.cgpa = sc.nextFloat();
+        st.display(st.name, st.Id, st.cgpa);
+    }
+}
+//Student.java
+public class Student {
+    String name;
+    String Id;
+    float cgpa;
+
+//    * Constructor *
+//    Student ()
+//    {
+//        this.name  = name;
+//        this.cgpa = cgpa;
+//    }
+
+
+    void display(String name, String Id, float cgpa)
+    {
+        System.out.println("Name : " +name);
+        System.out.println("ID : " +Id);
+        System.out.println("CGPA : " +cgpa);
+    }
+//    public String toString(){
+//        return name +" "+cgpa;
+//    }
+}
+
+
+
+----------------------------- 2.4 -----------------------------
+//Main.java
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Box b1 = new Box();
+        Scanner sc = new Scanner(System.in);
+        b1.length = sc.nextFloat();
+        b1.width = sc.nextFloat();
+        b1.height = sc.nextFloat();
+        float Volume = b1.getVolume(b1.length,b1.width, b1.height);
+        System.out.println(Volume);
+    }
+}
+
+//Box.java
+public class Box {
+    public float length;
+    public float width;
+    public float height;
+
+    public float getVolume(float length,float width, float height)
+    {
+        float vol = length*width*height;
+        return vol;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
