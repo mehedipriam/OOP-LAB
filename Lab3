@@ -1,0 +1,167 @@
+----------------------------3-------------------------------
+// Array fixed input
+public class Main {
+    public static void main(String[] args) {
+
+        int[][] num1 = {{5,4,3},
+                        {1,2,3},
+                        {9,8,7},
+                        {7,4,1}};
+        for(int i=0; i<4; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                System.out.print(num1[i][j]+ " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+----------------------------3.1-------------------------------
+// Array user input 
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int row,col;
+        Scanner sc = new Scanner(System.in);
+        row = sc.nextInt();
+        col = sc.nextInt();
+        int[][] num1 = new int[row][col];
+
+
+        for(int i=0; i<row; i++)
+        {
+            for (int j = 0; j <col; j++)
+            {
+                num1[i][j] = sc.nextInt();
+            }
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            for (int j = 0; j <col; j++)
+            {
+                System.out.print(num1[i][j]+ " ");
+            }
+            System.out.println();
+        }
+
+
+    }
+}
+
+----------------------------3.2-------------------------------
+// Array user input and sum the row and column
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int row ,col;
+        Scanner sc = new Scanner(System.in);
+        row = sc.nextInt();
+        col = sc.nextInt();
+        int[][] num1 = new int[row][col];
+
+
+        for(int i=0; i<row; i++)
+        {
+            for (int j = 0; j <col; j++)
+            {
+                num1[i][j] = sc.nextInt();
+            }
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            for (int j = 0; j <col; j++)
+            {
+                System.out.print(num1[i][j]+ " ");
+            }
+            System.out.println();
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            int sum =0;
+            for (int j = 0; j <col; j++)
+            {
+                sum = sum + num1[i][j];
+            }
+            System.out.println("Sum of the Row : " +sum);
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            int sum =0;
+            for (int j = 0; j <col; j++)
+            {
+                sum = sum + num1[j][i];
+            }
+            System.out.println("Sum of the Column : " +sum);
+        }
+
+    }
+}
+
+
+----------------------------3.3-------------------------------
+// Array user input and find max row and column
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        int row ,col;
+        Scanner sc = new Scanner(System.in);
+        row = sc.nextInt();
+        col = sc.nextInt();
+        int[][] num1 = new int[row][col];
+
+
+        for(int i=0; i<row; i++)
+        {
+            for (int j = 0; j <col; j++)
+            {
+                num1[i][j] = sc.nextInt();
+            }
+        }
+        for(int i=0; i<row; i++)
+        {
+            for (int j = 0; j <col; j++)
+            {
+                System.out.print(num1[i][j]+ " ");
+            }
+            System.out.println();
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            int max =0;
+            for (int j = 0; j <col; j++)
+            {
+                if (max<num1[i][j])
+                {
+                    max = num1[i][j];
+                }
+
+            }
+            System.out.println("Max of Row : " + max);
+        }
+
+        for(int i=0; i<row; i++)
+        {
+            int max =0;
+            for (int j = 0; j <col; j++)
+            {
+                if (max<num1[i][j])
+                {
+                    max = num1[j][i];
+                }
+
+            }
+            System.out.println("Max of Column : " + max);
+        }
+    }
+}
+
