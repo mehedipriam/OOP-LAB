@@ -35,7 +35,7 @@ class BoxWeight extends Box {
         double h;
 
         BoxWeight() {
-
+            super();
             this.weight = 5;
             this.h = 10;
         }
