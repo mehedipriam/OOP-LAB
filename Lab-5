@@ -1,0 +1,78 @@
+================= Kunal Kushwaha 3rd video Inheritance part ===========================
+
+public class Main {
+    public static void main(String[] args) {
+
+        Box box = new Box();
+        System.out.println("l :"+box.l+ " w :" +box.w+ " h:"+box.h);
+        BoxWeight box2 = new BoxWeight();
+        System.out.println("Parent (w) access child keyword: "+box2.w+" Child Weight: "+box2.weight); //here box2 child can access parent information
+                                                    // but mother can not access child information
+
+        System.out.println("Child h: "+box2.h+" Child Weight:"+box2.weight); //here child (h). If parent and child both side has (h) and
+        System.out.println("Parent (h): ");
+        box2.PrintDimensions(); // if we access parent (h) then we have to use super. we can't use super main file
+                                // so we have to create method and print there just call here like this
+    }
+}
+
+// Box.java 
+public class Box {
+    double l;
+    double w;
+    double h;
+
+    //constructor
+    Box(){
+        this.l = 1;
+        this.w = 1;
+        this.h = 1;
+
+    }
+}
+class BoxWeight extends Box {
+        double weight;
+        double h;
+
+        BoxWeight() {
+
+            this.weight = 5;
+            this.h = 10;
+        }
+        void PrintDimensions(){
+            System.out.println(super.h); // Prints the 'h' field from the parent class
+        }
+}
+
+============================= slide Code ====================================
+
+public class Main {
+    public static void main(String args[]) {
+        Child example = new Child();
+        example.childMethod();
+        example.parentMethod();
+        System.out.println(example.parentVariable);
+    }
+}
+
+//Parent.java 
+
+class Parent {
+    public int parentVariable = 10;
+
+    public void parentMethod() {
+        System.out.println("Parent Method");
+    }
+}
+
+class Child extends Parent {
+    public int childVariable = 5;
+
+    public void childMethod() {
+        parentMethod();
+        System.out.println(parentVariable+ " " +childVariable);
+    }
+}
+
+================================== ==================================
+
