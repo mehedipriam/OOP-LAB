@@ -1,5 +1,5 @@
  // Kunal Kushwaha 3rd video inheritence, overloading, overriding and oop slide 
-=================Inheritance part ===========================
+================= Inheritance part ===========================
 
 public class Main {
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ class BoxWeight extends Box {
         }
 }
 
-===================================Overloading ==========================
+=================================== Overloading ==========================
 //Main.java
 
 public class Main {
@@ -85,7 +85,7 @@ Output:
 l :1.0 w :1.0 h:1.0
 l :10.0 w :5.0 h:8.0
 
-======================================Override======================
+====================================== Overriding ======================
 //main.java
 public class Main {
     public static void main(String[] args) {
