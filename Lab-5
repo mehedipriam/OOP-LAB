@@ -44,6 +44,54 @@ class BoxWeight extends Box {
         }
 }
 
+===================================Overloading ==========================
+//Main.java
+
+public class Main {
+    public static void main(String[] args) {
+        Box box2 = new Box();
+        System.out.println("l :"+box2.l+ " w :" +box2.w+ " h:"+box2.h);
+
+        Box box = new Box(10 , 5, 8);
+        System.out.println("l :"+box.l+ " w :" +box.w+ " h:"+box.h);
+
+
+    }
+}
+//Box.java
+
+public class Box {
+    double l;
+    double w;
+    double h;
+
+    //constructor
+    Box(){
+        this.l = 1;
+        this.w = 1;
+        this.h = 1;
+
+    }
+    Box(double l, double w, double h) {   //This is overloading just because it has 3 parameters previous Box no one
+        this.l = l;
+        this.w = w;
+        this.h = h;
+    }
+}
+
+
+Output: 
+l :1.0 w :1.0 h:1.0
+l :10.0 w :5.0 h:8.0
+
+
+
+
+
+
+
+
+
 ============================= slide Code ====================================
 
 public class Main {
