@@ -72,7 +72,7 @@ public class Box {
         this.h = 1;
 
     }
-    Box(double l, double w, double h) {   //This is overloading just because it has 3 parameters previous Box no one
+    Box(double l, double w, double h) {   //When a class has the same name but different parameters like here Box() -> 0 parameter Box(10, 5, 8)-> here three parameters so this is called overloading
         this.l = l;
         this.w = w;
         this.h = h;
